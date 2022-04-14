@@ -1,0 +1,113 @@
+
+
+sample table structure  of "employee" table :
+
+
+EMPLOYEE_ID  	CITY  	   CONTACT  	EMPOYEENAME  	PINCODE  	PRIMARYSKILLS  	SALARY  	SECONDARYSKILLS  
+1		Kolkata	   99098987	    Amit	743269		   java		    60000	    database
+2		Lucknow	   99098989	    Ram		74326		   python	    40000	    php
+3		Bangalore  99098987	    Raju	743267		   js		    80000	    rubi
+4		Kolkata	   99098989	    Dev		743268		   spring	    75000	    aws
+
+
+Input Request:
+
+[
+    {
+        "employeeId": 1,
+        "empoyeeName": "Amit",
+        "salary": "60000",
+        "expertise": [
+            {
+                "primary": "java",
+                "secondary": "database"
+            }
+        ],
+        "city": "Kolkata",
+        "pincode": "743269",
+        "contact": "99098987"
+    },
+    {
+        "employeeId": 2,
+        "empoyeeName": "Ram",
+        "salary": "40000",
+        "expertise": [
+            {
+                "primary": "python",
+                "secondary": "php"
+            }
+        ],
+        "city": "Lucknow",
+        "pincode": "74326",
+        "contact": "99098989"
+    },
+    {
+        "employeeId": 3,
+        "empoyeeName": "Raju",
+        "salary": "80000",
+        "expertise": [
+            {
+                "primary": "js",
+                "secondary": "rubi"
+            }
+        ],
+        "city": "Bangalore",
+        "pincode": "743267",
+        "contact": "99098987"
+    },
+    {
+        "employeeId": 4,
+        "empoyeeName": "Dev",
+        "salary": "75000",
+        "expertise": [
+            {
+                "primary": "spring",
+                "secondary": "aws"
+            }
+        ],
+        "city": "Kolkata",
+        "pincode": "743268",
+        "contact": "99098989"
+    }
+]
+
+
+ouput Response:
+
+{
+        "employeeId": 1,
+        "empoyeeName": "Amit",
+        "salary": "60000",
+        "expertise": [
+            {
+                "primary": "java",
+                "secondary": "database"
+            }
+        ],
+        "city": "Kolkata",
+        "pincode": "743269",
+        "contact": "99098987"
+    }
+	
+	
+	 {
+        "employeeId": 4,
+        "empoyeeName": "Dev",
+        "salary": "75000",
+        "expertise": [
+            {
+                "primary": "spring",
+                "secondary": "aws"
+            }
+        ],
+        "city": "Kolkata",
+        "pincode": "743268",
+        "contact": "99098989"
+    }
+]
+
+Q1. save above epmloyee detials insto "employee" table using h2 database.
+Q2. find employee details using employeeId from "employee" table.
+Q3. Update primarySkills and secondarySkills in "employee" table whose employeeId is 3.
+Q4.find out the employee details who live is kolkata.
+

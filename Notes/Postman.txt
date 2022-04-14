@@ -1,0 +1,178 @@
+***
+Database-H2
+
+http://localhost:8085/h2-console/
+
+
+1.
+
+
+post
+
+
+http://localhost:8085/saveEmployee
+
+
+[
+    {
+        "employeeId": 1,
+        "empoyeeName": "Amit",
+        "salary": "60000",
+        "expertise": [
+            {
+                "primary": "java",
+                "secondary": "database"
+            }
+        ],
+        "city": "Kolkata",
+        "pincode": "743269",
+        "contact": "99098987"
+    },
+    {
+        "employeeId": 2,
+        "empoyeeName": "Ram",
+        "salary": "40000",
+        "expertise": [
+            {
+                "primary": "python",
+                "secondary": "php"
+            }
+        ],
+        "city": "Lucknow",
+        "pincode": "74326",
+        "contact": "99098989"
+    },
+    {
+        "employeeId": 3,
+        "empoyeeName": "Raju",
+        "salary": "80000",
+        "expertise": [
+            {
+                "primary": "js",
+                "secondary": "rubi"
+            }
+        ],
+        "city": "Bangalore",
+        "pincode": "743267",
+        "contact": "99098987"
+    },
+    {
+        "employeeId": 4,
+        "empoyeeName": "Dev",
+        "salary": "75000",
+        "expertise": [
+            {
+                "primary": "spring",
+                "secondary": "aws"
+            }
+        ],
+        "city": "Kolkata",
+        "pincode": "743268",
+        "contact": "99098989"
+    }
+]
+
+
+
+output->Saved Successfully
+
+
+
+
+2.
+
+
+get
+
+
+
+http://localhost:8085/getEmployee/1
+
+
+
+output
+
+
+
+{
+    "employeeId": "1",
+    "empoyeeName": "Amit",
+    "salary": "60000",
+    "expertise": [
+        {
+            "id": 0,
+            "primary": "java",
+            "secondary": "database"
+        }
+    ],
+    "city": "Kolkata",
+    "pincode": "743269",
+    "contact": "99098987"
+}
+
+3.
+
+
+post
+
+
+
+http://localhost:8085/updateEmployeeSkills
+
+
+{
+    "id":1,
+    "primary":"c",
+    "secondary":"php"
+}
+
+
+output: ->>>>>>>>>>>update successfuly
+
+
+4.
+
+
+
+get
+
+
+
+
+http://localhost:8085/findEmployeeByPlace?place=Kolkata
+
+
+[
+    {
+        "employeeId": "1",
+        "empoyeeName": "Amit",
+        "salary": "60000",
+        "expertise": [
+            {
+                "id": 0,
+                "primary": "java",
+                "secondary": "database"
+            }
+        ],
+        "city": "Kolkata",
+        "pincode": "743269",
+        "contact": "99098987"
+    },
+    {
+        "employeeId": "4",
+        "empoyeeName": "Dev",
+        "salary": "75000",
+        "expertise": [
+            {
+                "id": 0,
+                "primary": "spring",
+                "secondary": "aws"
+            }
+        ],
+        "city": "Kolkata",
+        "pincode": "743268",
+        "contact": "99098989"
+    }
+]
+
+
